@@ -394,6 +394,45 @@ th {
 
 .tarifs td:last-child { font-weight: 700; white-space: nowrap; }
 
+/* ---------- Infos pratiques : cartes Google Maps ---------- */
+
+.cartes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.carte {
+  margin: 0;
+  background: var(--blanc);
+  border-radius: var(--rayon);
+  border-top: 6px solid var(--sapin);
+  overflow: hidden;
+}
+.carte + .carte { border-top-color: var(--bleu); }
+
+.carte-cadre {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: #dbe5ea;
+}
+.carte-cadre iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.carte figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: .4rem 1rem;
+  padding: 1rem 1.25rem;
+}
+.carte figcaption a { font-weight: 700; }
+
 /* ---------- Formulaire ---------- */
 
 .formulaire {
@@ -473,7 +512,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--sapin); }
 @media (max-width: 800px) {
   .bandeau-interieur,
   .deux-colonnes,
-  .rangee { grid-template-columns: 1fr; }
+  .rangee,
+  .cartes { grid-template-columns: 1fr; }
   .entete { position: static; }
   .menu ul { justify-content: flex-start; }
   .formulaire { padding: 1.25rem; }
