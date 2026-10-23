@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Dessin d'un voilier Hansa naviguant sur la Seine">
+  <rect width="800" height="450" fill="#eef4f2"/>
+  <!-- soleil -->
+  <circle cx="650" cy="90" r="44" fill="none" stroke="#0d2a4a" stroke-width="3"/>
+  <g stroke="#0d2a4a" stroke-width="3" stroke-linecap="round">
+    <line x1="650" y1="26" x2="650" y2="12"/><line x1="714" y1="90" x2="728" y2="90"/>
+    <line x1="696" y1="44" x2="706" y2="34"/><line x1="604" y1="44" x2="594" y2="34"/>
+  </g>
+  <!-- rive et arbres (vert sapin) -->
+  <path d="M0 250 C120 232 240 240 360 236 S620 228 800 244 V280 H0Z" fill="#1e4d3a"/>
+  <g fill="none" stroke="#1e4d3a" stroke-width="3" stroke-linejoin="round">
+    <path d="M60 240 L84 180 L108 240"/><path d="M70 214 L84 196 L98 214"/>
+    <path d="M140 238 L168 164 L196 238"/><path d="M152 206 L168 186 L184 206"/>
+    <path d="M520 234 L544 176 L568 234"/>
+    <path d="M700 240 L722 186 L744 240"/>
+  </g>
+  <!-- pont -->
+  <g fill="none" stroke="#0d2a4a" stroke-width="3">
+    <path d="M250 236 L470 236"/>
+    <path d="M260 236 Q300 196 340 236"/><path d="M340 236 Q380 196 420 236"/><path d="M420 236 Q445 214 470 236"/>
+  </g>
+  <!-- eau -->
+  <rect y="270" width="800" height="180" fill="#0d2a4a"/>
+  <g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".55">
+    <path d="M40 310 q20 -8 40 0 t40 0"/><path d="M620 300 q20 -8 40 0 t40 0"/>
+    <path d="M120 400 q20 -8 40 0 t40 0"/><path d="M560 410 q20 -8 40 0 t40 0"/>
+    <path d="M680 360 q20 -8 40 0 t40 0"/>
+  </g>
+  <!-- bouée orange -->
+  <g>
+    <path d="M600 340 L610 304 L620 340 Z" fill="#f2994a" stroke="#fff" stroke-width="2"/>
+    <path d="M594 342 q16 -6 32 0" fill="none" stroke="#fff" stroke-width="2"/>
+  </g>
+  <!-- Hansa -->
+  <g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="360" y1="140" x2="360" y2="330"/>
+    <path d="M366 146 C410 200 432 268 440 322 L366 322 Z" fill="#1e4d3a"/>
+    <path d="M354 170 L300 322 L354 322 Z" fill="#0d2a4a"/>
+    <path d="M270 334 L470 334 C456 356 430 364 370 364 C318 364 284 356 270 334 Z" fill="#fff"/>
+    <!-- skipper assis dans le cockpit -->
+    <circle cx="392" cy="318" r="9" fill="#0d2a4a"/>
+    <path d="M250 378 C300 368 340 372 380 380 S450 386 490 376"/>
+  </g>
+</svg>

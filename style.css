@@ -1,0 +1,392 @@
+/* =========================================================
+   Nanterre à la Voile — feuille de style principale
+   Couleurs : bleu nuit, vert sapin, blanc (+ orange bouée)
+   ========================================================= */
+
+:root {
+  --bleu: #0d2a4a;
+  --bleu-clair: #1b4470;
+  --sapin: #1e4d3a;
+  --sapin-clair: #2c6a51;
+  --blanc: #ffffff;
+  --ecume: #eef4f2;
+  --bouee: #f2994a;
+  --texte: #14202e;
+  --gris: #5b6b78;
+
+  --titre: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --corps: "Source Sans 3", "Segoe UI", Roboto, Arial, sans-serif;
+
+  --largeur: 1100px;
+  --rayon: 6px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--corps);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--texte);
+  background: var(--ecume);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--sapin); }
+a:hover { color: var(--bleu); }
+
+:focus-visible {
+  outline: 3px solid var(--bouee);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 {
+  font-family: var(--titre);
+  line-height: 1.1;
+  color: var(--bleu);
+  margin: 0 0 .5em;
+}
+h1 { font-size: clamp(2.6rem, 6vw, 4.5rem); font-weight: 800; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 700; }
+h3 { font-size: 1.4rem; font-weight: 700; }
+
+p { margin: 0 0 1em; max-width: 68ch; }
+
+/* ---------- En-tête et navigation ---------- */
+
+.entete {
+  background: var(--bleu);
+  color: var(--blanc);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.entete-interieur {
+  max-width: var(--largeur);
+  margin: 0 auto;
+  padding: .6rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.marque {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  color: var(--blanc);
+  text-decoration: none;
+  font-family: var(--titre);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.marque img { width: 48px; height: 48px; }
+.marque:hover { color: var(--blanc); }
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+}
+
+.menu a {
+  display: block;
+  padding: .5rem .8rem;
+  color: var(--blanc);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: var(--rayon);
+}
+.menu a:hover { background: var(--bleu-clair); color: var(--blanc); }
+.menu a[aria-current="page"] {
+  background: var(--sapin);
+  box-shadow: inset 0 -3px 0 var(--bouee);
+}
+
+/* ---------- Bandeau de page (hero) ---------- */
+
+.bandeau {
+  background: var(--bleu);
+  color: var(--blanc);
+  position: relative;
+  padding: 3.5rem 1.25rem 5rem;
+}
+.bandeau::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 50px;
+  background: url("images/vague.svg") no-repeat bottom / 100% 100%;
+}
+.bandeau-interieur {
+  max-width: var(--largeur);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+.bandeau h1 { color: var(--blanc); }
+.bandeau p { font-size: 1.2rem; color: #d6e2ee; }
+.bandeau img { border-radius: var(--rayon); border: 4px solid var(--blanc); }
+
+.bandeau-simple .bandeau-interieur { grid-template-columns: 1fr; }
+
+/* ---------- Contenu ---------- */
+
+main { display: block; }
+
+.section {
+  max-width: var(--largeur);
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+}
+
+.section-sapin {
+  background: var(--sapin);
+  color: var(--blanc);
+}
+.section-sapin h2, .section-sapin h3 { color: var(--blanc); }
+.section-sapin a { color: var(--blanc); }
+.section-sapin .section { padding-top: 3rem; padding-bottom: 3rem; }
+
+.deux-colonnes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.bloc {
+  background: var(--blanc);
+  border-left: 6px solid var(--sapin);
+  padding: 1.5rem;
+  border-radius: 0 var(--rayon) var(--rayon) 0;
+}
+.bloc-bleu { border-left-color: var(--bleu); }
+
+.liste-simple { padding-left: 1.2rem; margin: 0 0 1em; }
+.liste-simple li { margin-bottom: .4rem; }
+
+.chiffres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+.chiffres strong {
+  display: block;
+  font-family: var(--titre);
+  font-size: 2.6rem;
+  color: var(--bouee);
+  line-height: 1;
+}
+
+.figure { margin: 0; }
+.figure figcaption {
+  font-size: .9rem;
+  color: var(--gris);
+  margin-top: .5rem;
+}
+.section-sapin .figure figcaption { color: #cfe0d8; }
+
+.partenaires {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+.partenaires li {
+  border: 2px solid var(--bleu);
+  border-radius: 999px;
+  padding: .3rem 1rem;
+  font-weight: 600;
+  color: var(--bleu);
+  background: var(--blanc);
+}
+
+.bouton {
+  display: inline-block;
+  background: var(--bouee);
+  color: var(--bleu);
+  font-weight: 700;
+  text-decoration: none;
+  padding: .8rem 1.4rem;
+  border-radius: var(--rayon);
+  border: none;
+  font-size: 1.05rem;
+  font-family: var(--corps);
+  cursor: pointer;
+}
+.bouton:hover { background: var(--blanc); color: var(--bleu); }
+
+/* ---------- Programme : frise ---------- */
+
+.frise {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: etape;
+  border-left: 4px solid var(--sapin);
+}
+.frise li {
+  counter-increment: etape;
+  position: relative;
+  padding: 0 0 1.6rem 2.2rem;
+}
+.frise li::before {
+  content: counter(etape);
+  position: absolute;
+  left: -1.15rem;
+  top: 0;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: var(--bleu);
+  color: var(--blanc);
+  font-family: var(--titre);
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--ecume);
+}
+.frise .heure {
+  font-family: var(--titre);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--sapin);
+}
+.frise h3 { margin-bottom: .2rem; }
+
+.tableau-conteneur { overflow-x: auto; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--blanc);
+  min-width: 520px;
+}
+th, td {
+  text-align: left;
+  padding: .75rem 1rem;
+  border-bottom: 1px solid #d5e0e6;
+  vertical-align: top;
+}
+th {
+  background: var(--bleu);
+  color: var(--blanc);
+  font-family: var(--titre);
+  font-size: 1.15rem;
+}
+tr.temps-fort td { background: #fff4ea; }
+
+/* ---------- Infos pratiques ---------- */
+
+.grille-infos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.tarifs td:last-child { font-weight: 700; white-space: nowrap; }
+
+/* ---------- Formulaire ---------- */
+
+.formulaire {
+  background: var(--blanc);
+  padding: 2rem;
+  border-radius: var(--rayon);
+  border-top: 6px solid var(--sapin);
+  max-width: 760px;
+}
+
+fieldset {
+  border: 2px solid #d5e0e6;
+  border-radius: var(--rayon);
+  padding: 1rem 1.25rem 1.25rem;
+  margin: 0 0 1.5rem;
+}
+legend {
+  font-family: var(--titre);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--bleu);
+  padding: 0 .4rem;
+}
+
+.champ { margin-bottom: 1rem; }
+.champ label,
+.champ .etiquette { display: block; font-weight: 600; margin-bottom: .3rem; }
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: .65rem .75rem;
+  font: inherit;
+  border: 2px solid #b9c8d3;
+  border-radius: var(--rayon);
+  background: var(--blanc);
+  color: var(--texte);
+}
+input:focus, select:focus, textarea:focus { border-color: var(--sapin); }
+
+.rangee {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.choix label { display: flex; gap: .5rem; align-items: baseline; font-weight: 400; margin-bottom: .35rem; }
+
+.aide { font-size: .9rem; color: var(--gris); margin: .2rem 0 0; }
+
+/* ---------- Pied de page ---------- */
+
+.pied {
+  background: var(--bleu);
+  color: #d6e2ee;
+  margin-top: 2rem;
+}
+.pied-interieur {
+  max-width: var(--largeur);
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: .95rem;
+}
+.pied a { color: var(--blanc); }
+.pied p { margin: 0; }
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 800px) {
+  .bandeau-interieur,
+  .deux-colonnes,
+  .rangee { grid-template-columns: 1fr; }
+  .entete { position: static; }
+  .menu ul { justify-content: flex-start; }
+  .formulaire { padding: 1.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

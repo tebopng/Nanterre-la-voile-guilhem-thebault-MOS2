@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Dessin de deux voiliers Hansa lors d'une initiation, un skipper accompagnant un débutant">
+  <rect width="600" height="400" fill="#eef4f2"/>
+  <rect y="250" width="600" height="150" fill="#1e4d3a"/>
+  <g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".6">
+    <path d="M30 300 q18 -7 36 0 t36 0"/><path d="M460 290 q18 -7 36 0 t36 0"/><path d="M300 370 q18 -7 36 0 t36 0"/>
+  </g>
+  <!-- bateau 1 -->
+  <g fill="none" stroke="#0d2a4a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="170" y1="90" x2="170" y2="250"/>
+    <path d="M175 96 C206 140 222 196 228 244 L175 244 Z" fill="#fff"/>
+    <path d="M165 116 L126 244 L165 244 Z" fill="#fff"/>
+    <path d="M100 254 L250 254 C240 272 220 278 172 278 C132 278 110 272 100 254 Z" fill="#0d2a4a"/>
+    <circle cx="186" cy="238" r="8" fill="#0d2a4a"/>
+  </g>
+  <!-- bateau 2, deux têtes : skipper + débutant -->
+  <g fill="none" stroke="#0d2a4a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="410" y1="110" x2="410" y2="262"/>
+    <path d="M415 116 C444 158 458 210 464 256 L415 256 Z" fill="#fff"/>
+    <path d="M405 134 L368 256 L405 256 Z" fill="#fff"/>
+    <path d="M342 266 L488 266 C478 284 458 290 412 290 C374 290 352 284 342 266 Z" fill="#fff"/>
+    <circle cx="420" cy="250" r="8" fill="#0d2a4a"/>
+    <circle cx="444" cy="252" r="7" fill="#f2994a" stroke="#0d2a4a"/>
+  </g>
+  <!-- bulle de conseil -->
+  <g fill="none" stroke="#0d2a4a" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M470 150 h90 a12 12 0 0 1 12 12 v34 a12 12 0 0 1 -12 12 h-60 l-16 16 v-16 h-14 a12 12 0 0 1 -12 -12 v-34 a12 12 0 0 1 12 -12z" fill="#fff"/>
+  </g>
+  <g stroke="#0d2a4a" stroke-width="2.5" stroke-linecap="round">
+    <line x1="486" y1="170" x2="552" y2="170"/><line x1="486" y1="186" x2="534" y2="186"/>
+  </g>
+</svg>

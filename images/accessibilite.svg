@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Dessin d'un ponton avec rampe d'accès et système de poulie pour embarquer une personne en fauteuil">
+  <rect width="600" height="400" fill="#eef4f2"/>
+  <rect y="290" width="600" height="110" fill="#0d2a4a"/>
+  <g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".55">
+    <path d="M360 330 q18 -7 36 0 t36 0"/><path d="M60 360 q18 -7 36 0 t36 0"/>
+  </g>
+  <g fill="none" stroke="#1e4d3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- rampe -->
+    <path d="M20 200 L150 260 L330 260 L330 278 L150 278 L20 218 Z" fill="#fff"/>
+    <line x1="40" y1="190" x2="150" y2="240"/><line x1="40" y1="190" x2="40" y2="208"/>
+    <line x1="150" y1="240" x2="150" y2="260"/>
+    <!-- pieux -->
+    <line x1="180" y1="278" x2="180" y2="320"/><line x1="300" y1="278" x2="300" y2="320"/>
+    <!-- potence -->
+    <line x1="290" y1="260" x2="290" y2="110"/>
+    <line x1="290" y1="110" x2="410" y2="110"/>
+    <line x1="290" y1="150" x2="330" y2="110"/>
+    <circle cx="400" cy="122" r="10" fill="#fff"/>
+    <line x1="400" y1="132" x2="400" y2="196"/>
+  </g>
+  <!-- siège suspendu -->
+  <g fill="none" stroke="#0d2a4a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M380 196 L420 196 L414 232 L386 232 Z" fill="#f2994a"/>
+    <circle cx="400" cy="184" r="9" fill="#0d2a4a"/>
+  </g>
+  <!-- fauteuil sur le ponton -->
+  <g fill="none" stroke="#0d2a4a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="214" cy="236" r="20"/>
+    <circle cx="246" cy="252" r="7"/>
+    <path d="M206 196 L206 230 L246 230 L246 246"/>
+    <path d="M206 210 L232 210"/>
+  </g>
+  <!-- Hansa à quai -->
+  <g fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M340 290 L520 290 C508 310 486 316 430 316 C384 316 352 310 340 290 Z" fill="#1e4d3a"/>
+    <line x1="470" y1="150" x2="470" y2="288"/>
+  </g>
+</svg>

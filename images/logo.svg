@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Logo Nanterre à la Voile">
+  <defs>
+    <clipPath id="c"><circle cx="100" cy="100" r="92"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="200" height="200" fill="#0d2a4a"/>
+    <path d="M0 128 C30 112 55 112 80 124 S130 140 160 122 S195 110 200 114 V200 H0Z" fill="#1e4d3a"/>
+  </g>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#fff" stroke-width="5"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="2 5"/>
+  <g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- mât -->
+    <line x1="100" y1="42" x2="100" y2="112"/>
+    <!-- grand-voile -->
+    <path d="M104 46 C126 70 136 92 140 110 L104 110 Z"/>
+    <!-- foc -->
+    <path d="M96 56 L70 108 L96 108 Z"/>
+    <!-- coque Hansa -->
+    <path d="M58 116 L144 116 C138 126 126 130 100 130 C78 130 64 126 58 116 Z"/>
+    <!-- tête du skipper assis au centre -->
+    <circle cx="114" cy="110" r="5" fill="#fff"/>
+    <!-- vague -->
+    <path d="M34 142 C50 132 64 132 78 142 S106 152 120 142 S150 132 166 142"/>
+    <path d="M48 158 C62 150 74 150 88 158 S114 166 128 158 S146 150 154 154"/>
+  </g>
+</svg>
