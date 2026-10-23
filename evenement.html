@@ -64,8 +64,17 @@
 
     <div class="section-sapin">
       <section class="section">
-        <h2>Le Hansa, un voilier pour tous</h2>
-        <p>Le Hansa est un petit dériveur stable et insubmersible, très utilisé en handivoile. Le marin est assis au centre du bateau, face à l’avant, et peut tout manœuvrer sans se déplacer grâce à des commandes regroupées devant lui. C’est le support idéal pour une première sortie sur l’eau, et c’est aussi un bateau de compétition, utilisé jusqu’au niveau international.</p>
+        <div class="deux-colonnes centre">
+          <div>
+            <h2>Le Hansa, un voilier pour tous</h2>
+            <p>Le Hansa est un petit dériveur stable et insubmersible, très utilisé en handivoile. Le marin est assis au centre du bateau, face à l’avant, et peut tout manœuvrer sans se déplacer grâce à des commandes regroupées devant lui. C’est le support idéal pour une première sortie sur l’eau, et c’est aussi un bateau de compétition, utilisé jusqu’au niveau international.</p>
+          </div>
+          <!-- VIDÉO YOUTUBE : remplace ID_DE_LA_VIDEO par l'identifiant de ta vidéo
+               (les caractères après "watch?v=" dans l'adresse YouTube) -->
+          <div class="video">
+            <iframe src="https://www.youtube-nocookie.com/embed/ID_DE_LA_VIDEO" title="Vidéo de présentation du voilier Hansa" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
       </section>
     </div>
 
@@ -81,16 +90,35 @@
       <h2>Une association étudiante aux commandes</h2>
       <p>L’événement est organisé au profit de <strong>Novosport</strong>, une association créée par des étudiants de Nanterre pour développer la pratique sportive pour tous. Les recettes de la buvette et des t-shirts lui sont reversées.</p>
 
-      <h3>Organisateurs et partenaires</h3>
-      <ul class="partenaires">
-        <li>Association Novosport</li>
-        <li>BDE STAPS Nanterre</li>
-        <li>Ville de Boulogne-Billancourt</li>
-        <li>Département des Hauts-de-Seine</li>
-        <li>ACBB</li>
-        <li>Club nautique Voiles de Seine</li>
-        <li>Sponsors privés</li>
-      </ul>
+    </section>
+
+    <!-- ===== CARROUSEL DES PARTENAIRES ===== -->
+    <section class="section partenaires-section">
+      <h2>Organisateurs et partenaires</h2>
+      <!-- La liste est écrite deux fois pour que le défilement tourne en boucle sans coupure.
+           Pour ajouter un partenaire, ajoute-le dans LES DEUX listes. -->
+      <div class="carrousel">
+        <div class="carrousel-piste">
+          <ul class="carrousel-liste">
+            <li class="partenaire">Association Novosport</li>
+            <li class="partenaire">BDE STAPS Nanterre</li>
+            <li class="partenaire">Ville de Boulogne-Billancourt</li>
+            <li class="partenaire">Département des Hauts-de-Seine</li>
+            <li class="partenaire">ACBB</li>
+            <li class="partenaire">Club nautique Voiles de Seine</li>
+            <li class="partenaire">Sponsors privés</li>
+          </ul>
+          <ul class="carrousel-liste" aria-hidden="true">
+            <li class="partenaire">Association Novosport</li>
+            <li class="partenaire">BDE STAPS Nanterre</li>
+            <li class="partenaire">Ville de Boulogne-Billancourt</li>
+            <li class="partenaire">Département des Hauts-de-Seine</li>
+            <li class="partenaire">ACBB</li>
+            <li class="partenaire">Club nautique Voiles de Seine</li>
+            <li class="partenaire">Sponsors privés</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
   </main>

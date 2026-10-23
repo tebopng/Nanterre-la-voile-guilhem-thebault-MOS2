@@ -177,6 +177,7 @@ main { display: block; }
 
 .liste-simple { padding-left: 1.2rem; margin: 0 0 1em; }
 .liste-simple li { margin-bottom: .4rem; }
+.liste-simple + h2 { margin-top: 2.5rem; }
 
 .chiffres {
   display: flex;
@@ -203,22 +204,6 @@ main { display: block; }
 .section-sapin .figure figcaption { color: #cfe0d8; }
 .section-sapin .figure img { border: 4px solid var(--blanc); border-radius: var(--rayon); }
 
-.partenaires {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: .6rem;
-}
-.partenaires li {
-  border: 2px solid var(--bleu);
-  border-radius: 999px;
-  padding: .3rem 1rem;
-  font-weight: 600;
-  color: var(--bleu);
-  background: var(--blanc);
-}
-
 .bouton {
   display: inline-block;
   background: var(--bouee);
@@ -233,6 +218,85 @@ main { display: block; }
   cursor: pointer;
 }
 .bouton:hover { background: var(--blanc); color: var(--bleu); }
+
+/* ---------- Événement : vidéo ---------- */
+
+.deux-colonnes.centre { align-items: center; }
+
+.video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--bleu);
+  border: 4px solid var(--blanc);
+  border-radius: var(--rayon);
+  overflow: hidden;
+}
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------- Événement : carrousel des partenaires ---------- */
+
+.partenaires-section { padding-top: 0; }
+
+.carrousel {
+  overflow: hidden;
+  padding: .5rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.carrousel-piste {
+  display: flex;
+  width: max-content;
+  animation: defilement 35s linear infinite;
+}
+.carrousel:hover .carrousel-piste { animation-play-state: paused; }
+
+.carrousel-liste {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0 1.25rem 0 0;
+}
+
+.partenaire {
+  width: 190px;
+  height: 190px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  text-align: center;
+  font-family: var(--titre);
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--bleu);
+  background: var(--blanc);
+  border: 3px solid var(--bleu);
+  border-bottom: 8px solid var(--sapin);
+  border-radius: var(--rayon);
+}
+.partenaire:nth-child(even) { border-bottom-color: var(--bouee); }
+
+@keyframes defilement {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Mouvement réduit : pas de défilement, les carrés passent à la ligne */
+@media (prefers-reduced-motion: reduce) {
+  .carrousel { -webkit-mask-image: none; mask-image: none; }
+  .carrousel-piste { animation: none; width: auto; }
+  .carrousel-liste { flex-wrap: wrap; }
+  .carrousel-liste[aria-hidden="true"] { display: none; }
+}
 
 /* ---------- Programme : sélecteur des jours ---------- */
 
@@ -517,6 +581,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--sapin); }
   .entete { position: static; }
   .menu ul { justify-content: flex-start; }
   .formulaire { padding: 1.25rem; }
+  .partenaire { width: 150px; height: 150px; font-size: 1.2rem; }
   .jours { gap: .35rem; padding: .5rem; }
   .jour-onglet { padding: .6rem .2rem; min-width: 0; }
   .jour-nom { font-size: .95rem; }
