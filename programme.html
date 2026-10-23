@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Programme | Nanterre à la Voile</title>
-  <meta name="description" content="Programme de Nanterre à la Voile du 9 au 13 juin 2027 : déroulé d’une journée, régate handivoile, DJ set et concert de clôture.">
+  <meta name="description" content="Programme jour par jour de Nanterre à la Voile du 9 au 13 juin 2027 : initiation, parcours de bouées, régate handivoile, DJ set et concert de clôture.">
   <link rel="icon" href="images/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,75 +43,411 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="deux-colonnes">
-        <div>
-          <h2>Le déroulé d’une journée</h2>
-          <ol class="frise">
-            <li>
-              <span class="heure">10h30</span>
+    <!-- ===== SÉLECTEUR DES JOURS ===== -->
+    <div class="section jours-section">
+      <div class="jours" role="tablist" aria-label="Choisir un jour">
+        <button class="jour-onglet" type="button" role="tab" id="onglet-mercredi" aria-controls="jour-mercredi" aria-selected="true" data-date="2027-06-09">
+          <span class="jour-nom">Mer.</span>
+          <span class="jour-num">9</span>
+          <span class="jour-mois">juin</span>
+        </button>
+        <button class="jour-onglet" type="button" role="tab" id="onglet-jeudi" aria-controls="jour-jeudi" aria-selected="false" data-date="2027-06-10" tabindex="-1">
+          <span class="jour-nom">Jeu.</span>
+          <span class="jour-num">10</span>
+          <span class="jour-mois">juin</span>
+        </button>
+        <button class="jour-onglet" type="button" role="tab" id="onglet-vendredi" aria-controls="jour-vendredi" aria-selected="false" data-date="2027-06-11" tabindex="-1">
+          <span class="jour-nom">Ven.</span>
+          <span class="jour-num">11</span>
+          <span class="jour-mois">juin</span>
+        </button>
+        <button class="jour-onglet" type="button" role="tab" id="onglet-samedi" aria-controls="jour-samedi" aria-selected="false" data-date="2027-06-12" tabindex="-1">
+          <span class="jour-nom">Sam.</span>
+          <span class="jour-num">12</span>
+          <span class="jour-mois">juin</span>
+          <span class="jour-plus">Soirée</span>
+        </button>
+        <button class="jour-onglet" type="button" role="tab" id="onglet-dimanche" aria-controls="jour-dimanche" aria-selected="false" data-date="2027-06-13" tabindex="-1">
+          <span class="jour-nom">Dim.</span>
+          <span class="jour-num">13</span>
+          <span class="jour-mois">juin</span>
+          <span class="jour-plus">Soirée</span>
+        </button>
+      </div>
+      <p class="jours-info">Toute la journée : buvette à petits prix et stands des associations engagées pour le handicap.</p>
+    </div>
+
+    <!-- ===== PROGRAMME DE CHAQUE JOUR ===== -->
+    <div class="section programme-jours">
+      <section class="jour-panneau" id="jour-mercredi" role="tabpanel" aria-labelledby="onglet-mercredi">
+        <div class="jour-titre">
+          <h2>Mercredi 9 juin</h2>
+          <p>10h30 – 18h00</p>
+        </div>
+        <ol class="creneaux">
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>10h30</span> 11h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
               <h3>Accueil</h3>
               <p>Retrait des badges, remise des gilets de sauvetage et visite du village.</p>
-            </li>
-            <li>
-              <span class="heure">11h00</span>
+            </div>
+          </li>
+          <li class="creneau creneau-ponton">
+            <p class="creneau-heure"><span>11h00</span> 11h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Ponton</span>
               <h3>Briefing sécurité</h3>
               <p>Présentation du bateau, des règles de navigation et de la zone autorisée.</p>
-            </li>
-            <li>
-              <span class="heure">11h30 – 13h00</span>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>11h30</span> 13h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
               <h3>Initiation et navigation libre</h3>
               <p>Sortie avec un skipper valide ou handi, puis navigation libre dans une zone délimitée et surveillée.</p>
-            </li>
-            <li>
-              <span class="heure">13h00 – 14h00</span>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>13h00</span> 14h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
               <h3>Pause déjeuner</h3>
               <p>Buvette à petits prix et stands associatifs.</p>
-            </li>
-            <li>
-              <span class="heure">14h00 – 16h30</span>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>14h00</span> 16h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
               <h3>Parcours de bouées</h3>
               <p>Un parcours balisé pour apprendre à virer de bord et à contourner une marque.</p>
-            </li>
-            <li>
-              <span class="heure">16h30 – 17h30</span>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>16h30</span> 17h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
               <h3>Régate handivoile</h3>
               <p>Une course sur Hansa ouverte aux participants qui se sentent prêts.</p>
-            </li>
-            <li>
-              <span class="heure">17h30 – 18h00</span>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>17h30</span> 18h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
               <h3>Remise des prix</h3>
               <p>Un prix remis par chaque partenaire de la journée.</p>
-            </li>
-          </ol>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="jour-panneau" id="jour-jeudi" role="tabpanel" aria-labelledby="onglet-jeudi">
+        <div class="jour-titre">
+          <h2>Jeudi 10 juin</h2>
+          <p>10h30 – 18h00</p>
+        </div>
+        <ol class="creneaux">
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>10h30</span> 11h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
+              <h3>Accueil</h3>
+              <p>Retrait des badges, remise des gilets de sauvetage et visite du village.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-ponton">
+            <p class="creneau-heure"><span>11h00</span> 11h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Ponton</span>
+              <h3>Briefing sécurité</h3>
+              <p>Présentation du bateau, des règles de navigation et de la zone autorisée.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>11h30</span> 13h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
+              <h3>Initiation et navigation libre</h3>
+              <p>Sortie avec un skipper valide ou handi, puis navigation libre dans une zone délimitée et surveillée.</p>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>13h00</span> 14h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
+              <h3>Pause déjeuner</h3>
+              <p>Buvette à petits prix et stands associatifs.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>14h00</span> 16h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
+              <h3>Parcours de bouées</h3>
+              <p>Un parcours balisé pour apprendre à virer de bord et à contourner une marque.</p>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>16h30</span> 17h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
+              <h3>Régate handivoile</h3>
+              <p>Une course sur Hansa ouverte aux participants qui se sentent prêts.</p>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>17h30</span> 18h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
+              <h3>Remise des prix</h3>
+              <p>Un prix remis par chaque partenaire de la journée.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="jour-panneau" id="jour-vendredi" role="tabpanel" aria-labelledby="onglet-vendredi">
+        <div class="jour-titre">
+          <h2>Vendredi 11 juin</h2>
+          <p>10h30 – 18h00</p>
+        </div>
+        <ol class="creneaux">
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>10h30</span> 11h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
+              <h3>Accueil</h3>
+              <p>Retrait des badges, remise des gilets de sauvetage et visite du village.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-ponton">
+            <p class="creneau-heure"><span>11h00</span> 11h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Ponton</span>
+              <h3>Briefing sécurité</h3>
+              <p>Présentation du bateau, des règles de navigation et de la zone autorisée.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>11h30</span> 13h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
+              <h3>Initiation et navigation libre</h3>
+              <p>Sortie avec un skipper valide ou handi, puis navigation libre dans une zone délimitée et surveillée.</p>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>13h00</span> 14h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
+              <h3>Pause déjeuner</h3>
+              <p>Buvette à petits prix et stands associatifs.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>14h00</span> 16h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
+              <h3>Parcours de bouées</h3>
+              <p>Un parcours balisé pour apprendre à virer de bord et à contourner une marque.</p>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>16h30</span> 17h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
+              <h3>Régate handivoile</h3>
+              <p>Une course sur Hansa ouverte aux participants qui se sentent prêts.</p>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>17h30</span> 18h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
+              <h3>Remise des prix</h3>
+              <p>Un prix remis par chaque partenaire de la journée.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="jour-panneau" id="jour-samedi" role="tabpanel" aria-labelledby="onglet-samedi">
+        <div class="jour-titre">
+          <h2>Samedi 12 juin</h2>
+          <p>10h30 – 22h30 (village ouvert en soirée)</p>
+        </div>
+        <ol class="creneaux">
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>10h30</span> 11h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
+              <h3>Accueil</h3>
+              <p>Retrait des badges, remise des gilets de sauvetage et visite du village.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-ponton">
+            <p class="creneau-heure"><span>11h00</span> 11h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Ponton</span>
+              <h3>Briefing sécurité</h3>
+              <p>Présentation du bateau, des règles de navigation et de la zone autorisée.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>11h30</span> 13h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
+              <h3>Initiation et navigation libre</h3>
+              <p>Sortie avec un skipper valide ou handi, puis navigation libre dans une zone délimitée et surveillée.</p>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>13h00</span> 14h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
+              <h3>Pause déjeuner</h3>
+              <p>Buvette à petits prix et stands associatifs.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>14h00</span> 16h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
+              <h3>Parcours de bouées</h3>
+              <p>Un parcours balisé pour apprendre à virer de bord et à contourner une marque.</p>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>16h30</span> 17h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
+              <h3>Régate handivoile</h3>
+              <p>Une course sur Hansa ouverte aux participants qui se sentent prêts.</p>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>17h30</span> 18h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
+              <h3>Remise des prix</h3>
+              <p>Un prix remis par chaque partenaire de la journée.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-soiree">
+            <p class="creneau-heure"><span>18h00</span> 22h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Soirée</span>
+              <h3>DJ set</h3>
+              <p>Le village reste ouvert : DJ set au bord de l’eau pour fêter le week-end.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="jour-panneau" id="jour-dimanche" role="tabpanel" aria-labelledby="onglet-dimanche">
+        <div class="jour-titre">
+          <h2>Dimanche 13 juin</h2>
+          <p>10h30 – 22h30 (village ouvert en soirée)</p>
+        </div>
+        <ol class="creneaux">
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>10h30</span> 11h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
+              <h3>Accueil</h3>
+              <p>Retrait des badges, remise des gilets de sauvetage et visite du village.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-ponton">
+            <p class="creneau-heure"><span>11h00</span> 11h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Ponton</span>
+              <h3>Briefing sécurité</h3>
+              <p>Présentation du bateau, des règles de navigation et de la zone autorisée.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>11h30</span> 13h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
+              <h3>Initiation et navigation libre</h3>
+              <p>Sortie avec un skipper valide ou handi, puis navigation libre dans une zone délimitée et surveillée.</p>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>13h00</span> 14h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
+              <h3>Pause déjeuner</h3>
+              <p>Buvette à petits prix et stands associatifs.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>14h00</span> 16h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
+              <h3>Parcours de bouées</h3>
+              <p>Un parcours balisé pour apprendre à virer de bord et à contourner une marque.</p>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-eau">
+            <p class="creneau-heure"><span>16h30</span> 17h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Sur l’eau</span>
+              <h3>Régate handivoile</h3>
+              <p>Une course sur Hansa ouverte aux participants qui se sentent prêts.</p>
+              <a class="creneau-lien" href="inscription.html">Réserver ce créneau</a>
+            </div>
+          </li>
+          <li class="creneau creneau-village">
+            <p class="creneau-heure"><span>17h30</span> 18h00</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Village</span>
+              <h3>Remise des prix</h3>
+              <p>Un prix remis par chaque partenaire de la journée.</p>
+            </div>
+          </li>
+          <li class="creneau creneau-soiree">
+            <p class="creneau-heure"><span>18h00</span> 22h30</p>
+            <div class="creneau-contenu">
+              <span class="etiquette-lieu">Soirée</span>
+              <h3>Concert de clôture</h3>
+              <p>Le grand concert qui clôt les cinq jours de Nanterre à la Voile.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </div>
+
+    <!-- ===== SOIRÉES ===== -->
+    <div class="section-sapin">
+      <section class="section deux-colonnes">
+        <div>
+          <h2>Les soirées au village</h2>
+          <p>Le samedi 12 et le dimanche 13 juin, le village reste ouvert jusqu’à 22h30 : DJ set le samedi, concert de clôture le dimanche. Le village partenaires sera ouvert selon les partenaires confirmés.</p>
         </div>
         <figure class="figure">
           <img src="images/village.svg" alt="Dessin du village de l’événement le soir : stands, buvette et scène avec un DJ" width="600" height="400">
-          <figcaption>Le samedi et le dimanche, le village se transforme en scène.</figcaption>
         </figure>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Jour par jour</h2>
-      <div class="tableau-conteneur">
-        <table>
-          <thead>
-            <tr><th scope="col">Date</th><th scope="col">Sur l’eau</th><th scope="col">Au village</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Mercredi 9 juin</td><td>10h30 – 18h00</td><td>Buvette et stands associatifs</td></tr>
-            <tr><td>Jeudi 10 juin</td><td>10h30 – 18h00</td><td>Buvette et stands associatifs</td></tr>
-            <tr><td>Vendredi 11 juin</td><td>10h30 – 18h00</td><td>Buvette et stands associatifs</td></tr>
-            <tr class="temps-fort"><td>Samedi 12 juin</td><td>10h30 – 18h00</td><td>DJ set en soirée, village ouvert jusqu’à 22h30</td></tr>
-            <tr class="temps-fort"><td>Dimanche 13 juin</td><td>10h30 – 18h00</td><td>Concert de clôture, village ouvert jusqu’à 22h30</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="aide">Le village partenaires sera ouvert selon les partenaires confirmés.</p>
-    </section>
+      </section>
+    </div>
 
   </main>
+
+  <script src="programme.js"></script>
 
   <!-- ===== PIED DE PAGE ===== -->
   <footer class="pied">
