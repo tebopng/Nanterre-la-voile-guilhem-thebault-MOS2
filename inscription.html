@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inscription | Nanterre à la Voile</title>
+  <meta name="description" content="Formulaire d’inscription à Nanterre à la Voile : choix de l’activité, du jour et du créneau.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== EN-TÊTE ET MENU (identique sur toutes les pages) ===== -->
+  <header class="entete">
+    <div class="entete-interieur">
+      <a class="marque" href="index.html">
+        <img src="images/logo.svg" alt="" width="48" height="48">
+        Nanterre à la Voile
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+        <li><a href="index.html">Présentation</a></li>
+        <li><a href="evenement.html">L’événement</a></li>
+        <li><a href="programme.html">Programme</a></li>
+        <li><a href="infos-pratiques.html">Infos pratiques</a></li>
+        <li><a href="inscription.html" aria-current="page">Inscription</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="bandeau bandeau-simple">
+      <div class="bandeau-interieur">
+        <div>
+          <h1>Inscription</h1>
+          <p>Réservez votre sortie sur l’eau. Les places sont limitées pour chaque créneau.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <!-- Formulaire HTML simple : il n'est relié à aucun serveur (action="#") -->
+      <form class="formulaire" action="#" method="post">
+
+        <fieldset>
+          <legend>Vos informations</legend>
+          <div class="rangee">
+            <div class="champ">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" autocomplete="family-name" required>
+            </div>
+            <div class="champ">
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" autocomplete="given-name" required>
+            </div>
+          </div>
+          <div class="rangee">
+            <div class="champ">
+              <label for="age">Âge</label>
+              <input type="number" id="age" name="age" min="5" max="99" required>
+            </div>
+            <div class="champ">
+              <label for="email">Adresse e-mail</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="champ">
+            <label for="categorie">Catégorie de tarif</label>
+            <select id="categorie" name="categorie" required>
+              <option value="">Choisissez votre catégorie</option>
+              <option value="moins12">Moins de 12 ans (gratuit)</option>
+              <option value="handicap">Titulaire d’une carte handicap (gratuit)</option>
+              <option value="nanterre">Université Paris Nanterre, Novosport ou licencié FFVoile (5 €)</option>
+              <option value="visiteur">Autre visiteur (8 €)</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Votre sortie</legend>
+          <div class="champ choix">
+            <span class="etiquette">Activité</span>
+            <label><input type="radio" name="activite" value="initiation" required> Initiation avec un skipper</label>
+            <label><input type="radio" name="activite" value="libre"> Navigation libre</label>
+            <label><input type="radio" name="activite" value="bouees"> Parcours de bouées</label>
+            <label><input type="radio" name="activite" value="regate"> Régate handivoile</label>
+          </div>
+          <div class="rangee">
+            <div class="champ">
+              <label for="jour">Jour</label>
+              <select id="jour" name="jour" required>
+                <option value="">Choisissez un jour</option>
+                <option value="2027-06-09">Mercredi 9 juin</option>
+                <option value="2027-06-10">Jeudi 10 juin</option>
+                <option value="2027-06-11">Vendredi 11 juin</option>
+                <option value="2027-06-12">Samedi 12 juin</option>
+                <option value="2027-06-13">Dimanche 13 juin</option>
+              </select>
+            </div>
+            <div class="champ">
+              <label for="creneau">Créneau</label>
+              <select id="creneau" name="creneau" required>
+                <option value="">Choisissez un créneau</option>
+                <option value="matin">11h30 – 13h00</option>
+                <option value="apres-midi-1">14h00 – 16h30</option>
+                <option value="apres-midi-2">16h30 – 18h00</option>
+              </select>
+            </div>
+          </div>
+          <div class="champ choix">
+            <span class="etiquette">Besoin d’aménagement</span>
+            <label><input type="checkbox" name="amenagement" value="fauteuil"> Je me déplace en fauteuil (embarquement par poulie)</label>
+            <label><input type="checkbox" name="amenagement" value="accompagnant"> Je viens avec un accompagnant</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>T-shirt et autorisation</legend>
+          <div class="champ">
+            <label for="tshirt">T-shirt officiel (10 €)</label>
+            <select id="tshirt" name="tshirt">
+              <option value="aucun">Pas de t-shirt</option>
+              <option value="enfant">Taille enfant</option>
+              <option value="xs">XS</option>
+              <option value="s">S</option>
+              <option value="m">M</option>
+              <option value="l">L</option>
+              <option value="xl">XL</option>
+              <option value="xxl">XXL</option>
+            </select>
+          </div>
+          <div class="champ choix">
+            <span class="etiquette">Pour les mineurs : autorisation parentale fournie ?</span>
+            <label><input type="radio" name="autorisation" value="oui"> Oui</label>
+            <label><input type="radio" name="autorisation" value="non"> Non</label>
+            <label><input type="radio" name="autorisation" value="majeur" checked> Je suis majeur</label>
+            <p class="aide">L’autorisation signée sera demandée à l’accueil.</p>
+          </div>
+          <div class="champ">
+            <label for="message">Une question ou une précision ?</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+        </fieldset>
+
+        <button class="bouton" type="submit">Envoyer mon inscription</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ===== PIED DE PAGE ===== -->
+  <footer class="pied">
+    <div class="pied-interieur">
+      <p>Nanterre à la Voile, du 9 au 13 juin 2027, Boulogne-Billancourt</p>
+      <p>Contact : <a href="mailto:nanterrealavoile@parisnanterre.fr">nanterrealavoile@parisnanterre.fr</a></p>
+      <p>Projet réalisé par Guilhem Thebault, Master STAPS MOS, Université Paris Nanterre</p>
+    </div>
+  </footer>
+
+</body>
+</html>
